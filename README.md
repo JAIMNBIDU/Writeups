@@ -11,6 +11,9 @@ I work toward detection engineering and red teaming. This is where the two meet.
 | Writeup | Environment | Chain | Detection focus |
 |---|---|---|---|
 | [MARVEL.local — Full AD Compromise](./marvel-ad-compromise) | 4-machine Active Directory (TCM / PNPT) | LLMNR poisoning → NTLM relay → pass-the-hash → Kerberoast → PsExec → token theft → DCSync | Event IDs and SOC signals per step |
+| [Academy — Credential Exposure to Root](./academy-credential-exposure) | HackTheBox · Linux | anonymous FTP creds → PHP upload bypass → linpeas → root via cron hijack | world-writable root cron, server-side upload validation, FTP exposure |
+| [Blue — EternalBlue by Hand](./blue-eternalblue) | HackTheBox · Windows 7 SP1 | SMB enum → MS17-010 run manually → SYSTEM | SMBv1 TRANSACTION2 on the wire, patching + segmentation |
+| [Kioptrix — SMB to Root via trans2open](./kioptrix-trans2open) | VulnHub · Linux | SMB enum → Samba 2.2.x trans2open overflow → root | malformed TRANSACTION2 signature, EOL Samba isolation |
 
 More labs documented the same way are on the way.
 
